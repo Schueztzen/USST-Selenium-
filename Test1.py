@@ -173,6 +173,6 @@ if __name__ == "__main__":
     logger.addHandler(fh)
     logger.addHandler(ch)
     logger.setLevel(logging.INFO)
-    # check_in()
-    main()
+    check_in()
+    # main()
 
