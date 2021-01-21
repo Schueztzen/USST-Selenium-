@@ -20,7 +20,7 @@ class User:
     student_psd = "Yxc980825"  # 密码
     position = ("***", "***")  # 位置
     SCKEY = "SCU152204T7df9f7610d301922547318990800962460069bc47f913"   # api接口
-    set_time = [(8,05)]    # 设置打卡时间
+    set_time = [(8,5)]    # 设置打卡时间
     max_attempt = 5  # 最大失败次数
 
 
