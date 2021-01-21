@@ -37,5 +37,5 @@ jobs:
 #         STUID: ${{ secrets.Stuid }}
 #         PASSWORD: ${{ secrets.Password }}
       run: |
-          python3 Test.py
+          python3 Test1.py
 #          "$STUID" "$PASSWORD"
