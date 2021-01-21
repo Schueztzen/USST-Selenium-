@@ -16,10 +16,10 @@ from selenium.common.exceptions import NoSuchElementException
 
 # 创建用户对象
 class User:
-    student_id = $STUDENT_ID  # 学号
-    student_psd = $STUDENT_PSD  # 密码
+    student_id = "202350023"  # 学号
+    student_psd = "Yxc980825"  # 密码
     position = ("***", "***")  # 位置
-    SCKEY = $MY_SCKEY   # api接口
+    SCKEY = "SCU152204T7df9f7610d301922547318990800962460069bc47f913"   # api接口
     set_time = [(8,05)]    # 设置打卡时间
     max_attempt = 5  # 最大失败次数
 
