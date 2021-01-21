@@ -16,11 +16,11 @@ from selenium.common.exceptions import NoSuchElementException
 
 # 创建用户对象
 class User:
-    student_id = "202350023"  # 学号
-    student_psd = "Yxc980825"  # 密码
-    position = ("31.291265279138127", "121.55311693165586")  # 位置
-    SCKEY = "SCU152204T7df9f7610d301922547318990800962460069bc47f913"  # api接口
-    set_time = [(9, 20)]
+    student_id = "********"  # 学号
+    student_psd = "********"  # 密码
+    position = ("***", "***")  # 位置
+    SCKEY = "***"  # api接口
+    set_time = [(9, 20)]    # 设置打卡时间
     max_attempt = 5  # 最大失败次数
 
 
@@ -63,13 +63,13 @@ def login():
         else:
             # 出现密码错误提示框
             if len(driver.find_elements_by_css_selector('#msg')) > 0:
-                send_message("打卡失败，用户名密码错误，程序已退出，请检查")
+                send_message("failed, please check your id or password")
                 logger.info("failed, please check your id or password")
                 exit(0)
 
             # 若只是反应慢，重试
             if fail_cnt >= User.max_attempt:
-                send_message("登录超时超过最大尝试次数，请检查网络或打卡系统已崩溃")
+                send_message("time out, failed times have over max attempt times")
                 logger.info("time out, failed times have over max attempt times ")
                 return False, None
             time.sleep(10)
@@ -173,6 +173,6 @@ if __name__ == "__main__":
     logger.addHandler(fh)
     logger.addHandler(ch)
     logger.setLevel(logging.INFO)
-    check_in()
-    # main()
+    # check_in()
+    main()
 
